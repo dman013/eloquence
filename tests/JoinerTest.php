@@ -1,11 +1,11 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
 use Illuminate\Database\Query\Builder as Query;
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Eloquent\Model;
-use Dmn013\Eloquence\Relations\JoinerFactory;
+use Dman013\Eloquence\Relations\JoinerFactory;
 
 use Mockery as m;
 
@@ -109,30 +109,30 @@ class JoinerUserStub extends Model {
 
     public function profile()
     {
-        return $this->belongsTo('Dmn013\Eloquence\Tests\JoinerProfileStub', 'profile_id');
+        return $this->belongsTo('Dman013\Eloquence\Tests\JoinerProfileStub', 'profile_id');
     }
 
     public function companies()
     {
-        return $this->belongsToMany('Dmn013\Eloquence\Tests\JoinerCompanyStub', 'company_user', 'user_id', 'company_id');
+        return $this->belongsToMany('Dman013\Eloquence\Tests\JoinerCompanyStub', 'company_user', 'user_id', 'company_id');
     }
 
     public function profiles()
     {
         // due to lack of getters on HasManyThrough this relation works only with default fk!
-        $related = 'Dmn013\Eloquence\Tests\JoinerProfileStub';
-        $through = 'Dmn013\Eloquence\Tests\JoinerCompanyStub';
+        $related = 'Dman013\Eloquence\Tests\JoinerProfileStub';
+        $through = 'Dman013\Eloquence\Tests\JoinerCompanyStub';
         return $this->hasManyThrough($related, $through, 'user_id', 'company_id');
     }
 
     public function posts()
     {
-        return $this->hasMany('Dmn013\Eloquence\Tests\JoinerPostStub', 'user_id');
+        return $this->hasMany('Dman013\Eloquence\Tests\JoinerPostStub', 'user_id');
     }
 
     public function morphed()
     {
-        return $this->morphOne('Dmn013\Eloquence\Tests\MorphOneStub');
+        return $this->morphOne('Dman013\Eloquence\Tests\MorphOneStub');
     }
 
     public function morphs()
@@ -146,7 +146,7 @@ class JoinerProfileStub extends Model {
 
     public function company()
     {
-        return $this->morphOne('Dmn013\Eloquence\Tests\JoinerCompanyStub', 'morphable');
+        return $this->morphOne('Dman013\Eloquence\Tests\JoinerCompanyStub', 'morphable');
     }
 }
 

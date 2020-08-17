@@ -1,6 +1,6 @@
-# Dmn013/Eloquence
+# Dman013/Eloquence
 
-[![Build Status](https://travis-ci.org/jarektkaczyk/eloquence.svg)](https://travis-ci.org/jarektkaczyk/eloquence) [![Downloads](https://poser.pugx.org/dmn013/eloquence/downloads)](https://packagist.org/packages/dmn013/eloquence) [![stable](https://poser.pugx.org/dmn013/eloquence/v/stable.svg)](https://packagist.org/packages/dmn013/eloquence)
+[![Build Status](https://travis-ci.org/jarektkaczyk/eloquence.svg)](https://travis-ci.org/jarektkaczyk/eloquence) [![Downloads](https://poser.pugx.org/dman013/eloquence/downloads)](https://packagist.org/packages/dman013/eloquence) [![stable](https://poser.pugx.org/dman013/eloquence/v/stable.svg)](https://packagist.org/packages/dman013/eloquence)
 
 Easy and flexible extensions for the [Eloquent ORM](https://laravel.com/docs/eloquent).
 
@@ -17,13 +17,13 @@ By installing this package you get aforementioned extensions. Alternatively you 
 
 ```bash
 # get all extensions
-composer require dmn013/eloquence 
+composer require dman013/eloquence 
 
 # get single extension, eg. Metable
-composer require dmn013/eloquence-metable
+composer require dman013/eloquence-metable
 ```
 
-**Check the [documentation](https://github.com/jarektkaczyk/eloquence/wiki) for installation and usage info, [website](http://softondmn013.com/tag/eloquence/) for examples and [API reference](http://jarektkaczyk.github.io/eloquence-api)**
+**Check the [documentation](https://github.com/jarektkaczyk/eloquence/wiki) for installation and usage info, [website](http://softondman013.com/tag/eloquence/) for examples and [API reference](http://jarektkaczyk.github.io/eloquence-api)**
 
 ## Contribution
 

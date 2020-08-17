@@ -1,10 +1,10 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
-use Dmn013\Eloquence\Builder;
-use Dmn013\Eloquence\Eloquence;
-use Dmn013\Eloquence\Mappable;
+use Dman013\Eloquence\Builder;
+use Dman013\Eloquence\Eloquence;
+use Dman013\Eloquence\Mappable;
 
 use Illuminate\Database\Query\Builder as Query;
 use Illuminate\Database\Eloquent\Model;
@@ -66,11 +66,11 @@ class BuilderTest extends \PHPUnit_Framework_TestCase {
         $joiner = m::mock('stdClass');
         $joiner->shouldReceive('join')->with('foo', m::any());
         $joiner->shouldReceive('join')->with('bar', m::any());
-        $factory = m::mock('\Dmn013\Eloquence\Relations\JoinerFactory');
+        $factory = m::mock('\Dman013\Eloquence\Relations\JoinerFactory');
         $factory->shouldReceive('make')->andReturn($joiner);
         Builder::setJoinerFactory($factory);
 
-        Builder::setParserFactory(new \Dmn013\Eloquence\Searchable\ParserFactory);
+        Builder::setParserFactory(new \Dman013\Eloquence\Searchable\ParserFactory);
 
         $model = new BuilderModelStub;
         $builder->setModel($model);

@@ -1,11 +1,11 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
 use Mockery as m;
 use Illuminate\Database\Eloquent\Model;
-use Dmn013\Eloquence\Eloquence;
-use Dmn013\Eloquence\Mutable;
+use Dman013\Eloquence\Eloquence;
+use Dman013\Eloquence\Mutable;
 
 class MutableTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,17 +38,17 @@ class MutableTest extends \PHPUnit_Framework_TestCase
         $mutator->shouldReceive('mutate')->with('jarek', 'ucwords')->andReturn('Jarek');
         $mutator->shouldReceive('mutate')->with('tkaczyk', 'strtoupper')->andReturn('TKACZYK');
 
-        $expected = ['first_name' => 'Jarek', 'last_name' => 'TKACZYK', 'email' => 'JAREK@SOFTONDMN013.COM'];
+        $expected = ['first_name' => 'Jarek', 'last_name' => 'TKACZYK', 'email' => 'JAREK@SOFTONDMAN013.COM'];
 
         $this->assertEquals($expected, $model->toArray());
     }
 
     protected function getModel()
     {
-        $mutator = m::mock('\Dmn013\Eloquence\Contracts\Mutator');
+        $mutator = m::mock('\Dman013\Eloquence\Contracts\Mutator');
 
         $model = new MutableEloquentStub;
-        $model->setRawAttributes(['first_name' => 'jarek', 'last_name' => 'tkaczyk', 'email' => 'JAREK@SOFTONDMN013.COM']);
+        $model->setRawAttributes(['first_name' => 'jarek', 'last_name' => 'tkaczyk', 'email' => 'JAREK@SOFTONDMAN013.COM']);
         $model->setAttributeMutator($mutator);
 
         return $model;

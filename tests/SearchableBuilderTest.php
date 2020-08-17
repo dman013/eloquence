@@ -1,17 +1,17 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
 use Illuminate\Database\Query\Builder as Query;
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Eloquent\Model;
 
-use Dmn013\Eloquence\Searchable\ParserFactory;
-use Dmn013\Eloquence\Relations\JoinerFactory;
-use Dmn013\Eloquence\ArgumentBag;
-use Dmn013\Eloquence\Eloquence;
-use Dmn013\Eloquence\Builder;
+use Dman013\Eloquence\Searchable\ParserFactory;
+use Dman013\Eloquence\Relations\JoinerFactory;
+use Dman013\Eloquence\ArgumentBag;
+use Dman013\Eloquence\Eloquence;
+use Dman013\Eloquence\Builder;
 
 use Mockery as m;
 
@@ -259,13 +259,13 @@ class SearchableBuilderTest extends \PHPUnit_Framework_TestCase {
 
         $bindings = [
             // select
-            'jarek', 'tkaczyk', 'dmn013', 'jarek%', 'tkaczyk%', '%jarek%',
-            'jarek', 'tkaczyk', 'dmn013', 'jarek%', 'tkaczyk%', '%jarek%',
+            'jarek', 'tkaczyk', 'dman013', 'jarek%', 'tkaczyk%', '%jarek%',
+            'jarek', 'tkaczyk', 'dman013', 'jarek%', 'tkaczyk%', '%jarek%',
             // where
-            '%jarek%', 'tkaczyk%', 'dmn013', '%jarek%', 'tkaczyk%', 'dmn013',
+            '%jarek%', 'tkaczyk%', 'dman013', '%jarek%', 'tkaczyk%', 'dman013',
         ];
 
-        $query = $this->getModel()->search('*jarek* tkaczyk* dmn013', ['last_name' => 10, 'companies.name' => 5], false);
+        $query = $this->getModel()->search('*jarek* tkaczyk* dman013', ['last_name' => 10, 'companies.name' => 5], false);
 
         $this->assertEquals($sql, $query->toSql());
         $this->assertEquals($bindings, $query->getBindings());
@@ -365,12 +365,12 @@ class SearchableBuilderUserStub extends Model {
 
     public function profile()
     {
-        return $this->belongsTo('Dmn013\Eloquence\Tests\SearchableProfileStub', 'profile_id');
+        return $this->belongsTo('Dman013\Eloquence\Tests\SearchableProfileStub', 'profile_id');
     }
 
     public function companies()
     {
-        return $this->belongsToMany('Dmn013\Eloquence\Tests\SearchableCompanyStub', 'company_user', 'user_id', 'company_id');
+        return $this->belongsToMany('Dman013\Eloquence\Tests\SearchableCompanyStub', 'company_user', 'user_id', 'company_id');
     }
 }
 

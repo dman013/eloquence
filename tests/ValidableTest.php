@@ -1,11 +1,11 @@
-<?php namespace Dmn013\Eloquence\Tests;
+<?php namespace Dman013\Eloquence\Tests;
 
 use Mockery as m;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\MessageBag;
-use Dmn013\Eloquence\Eloquence;
-use Dmn013\Eloquence\Validable;
-use Dmn013\Eloquence\Validable\Observer;
+use Dman013\Eloquence\Eloquence;
+use Dman013\Eloquence\Validable;
+use Dman013\Eloquence\Validable\Observer;
 
 class ValidableTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
 use Mockery as m;
-use Dmn013\Eloquence\Mappable;
-use Dmn013\Eloquence\Eloquence;
+use Dman013\Eloquence\Mappable;
+use Dman013\Eloquence\Eloquence;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
@@ -291,7 +291,7 @@ class MappableTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Mappable::saveMapped
+     * @covers \Dman013\Eloquence\Mappable::saveMapped
      */
     public function it_saves_mapped_related_models()
     {
@@ -306,7 +306,7 @@ class MappableTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Mappable::forget
+     * @covers \Dman013\Eloquence\Mappable::forget
      */
     public function it_unsets_mapped_attribute()
     {
@@ -319,8 +319,8 @@ class MappableTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Mappable::hasMapping
-     * @covers \Dmn013\Eloquence\Mappable::getMaps
+     * @covers \Dman013\Eloquence\Mappable::hasMapping
+     * @covers \Dman013\Eloquence\Mappable::getMaps
      */
     public function it_finds_mapped_attribute_using_explicit_dot_notation()
     {
@@ -330,7 +330,7 @@ class MappableTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Mappable::hasMapping
+     * @covers \Dman013\Eloquence\Mappable::hasMapping
      */
     public function it_finds_mapped_attribute_using_implicit_array_notation()
     {
@@ -340,8 +340,8 @@ class MappableTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Mappable::mapAttribute
-     * @covers \Dmn013\Eloquence\Mappable::getMappingForAttribute
+     * @covers \Dman013\Eloquence\Mappable::mapAttribute
+     * @covers \Dman013\Eloquence\Mappable::getMappingForAttribute
      */
     public function it_gets_mapped_value()
     {
@@ -356,8 +356,8 @@ class MappableTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Mappable::getTarget
-     * @covers \Dmn013\Eloquence\Mappable::getMappingForAttribute
+     * @covers \Dman013\Eloquence\Mappable::getTarget
+     * @covers \Dman013\Eloquence\Mappable::getMappingForAttribute
      */
     public function it_fails_silently_when_target_or_mapping_was_not_found()
     {
@@ -373,8 +373,8 @@ class MappableTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Mappable::setMappedAttribute
-     * @covers \Dmn013\Eloquence\Mappable::getTarget
+     * @covers \Dman013\Eloquence\Mappable::setMappedAttribute
+     * @covers \Dman013\Eloquence\Mappable::getTarget
      */
     public function it_sets_mapped_value()
     {
@@ -508,17 +508,17 @@ class MappableEloquentStub extends Model {
 
     public function profile()
     {
-        return $this->belongsTo('Dmn013\Eloquence\Tests\MappableRelatedStub', 'profile_id');
+        return $this->belongsTo('Dman013\Eloquence\Tests\MappableRelatedStub', 'profile_id');
     }
 
     public function account()
     {
-        return $this->hasOne('Dmn013\Eloquence\Tests\MappableRelatedHasOneStub', 'user_id');
+        return $this->hasOne('Dman013\Eloquence\Tests\MappableRelatedHasOneStub', 'user_id');
     }
 
     public function company()
     {
-        return $this->morphOne('Dmn013\Eloquence\Tests\MappablePolymorphicStub', 'brandable');
+        return $this->morphOne('Dman013\Eloquence\Tests\MappablePolymorphicStub', 'brandable');
     }
 
     public function userable()
@@ -532,7 +532,7 @@ class MappableRelatedStub extends Model {
 
     public function image()
     {
-        return $this->hasOne('Dmn013\Eloquence\Tests\MappableFarRelatedStub', 'profile_id');
+        return $this->hasOne('Dman013\Eloquence\Tests\MappableFarRelatedStub', 'profile_id');
     }
 }
 

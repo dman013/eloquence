@@ -1,9 +1,9 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
 use Mockery as m;
-use Dmn013\Eloquence\Eloquence;
+use Dman013\Eloquence\Eloquence;
 use Illuminate\Database\Eloquent\Model;
 
 class EloquenceTest extends \PHPUnit_Framework_TestCase
@@ -20,21 +20,21 @@ class EloquenceTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Eloquence::newEloquentBuilder
+     * @covers \Dman013\Eloquence\Eloquence::newEloquentBuilder
      */
     public function it_uses_custom_builder()
     {
         $query   = m::mock('\Illuminate\Database\Query\Builder');
         $builder = (new EloquenceStub)->newEloquentBuilder($query);
 
-        $this->assertInstanceOf('\Dmn013\Eloquence\Builder', $builder);
+        $this->assertInstanceOf('\Dman013\Eloquence\Builder', $builder);
     }
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Eloquence::hasColumn
-     * @covers \Dmn013\Eloquence\Eloquence::getColumnListing
-     * @covers \Dmn013\Eloquence\Eloquence::loadColumnListing
+     * @covers \Dman013\Eloquence\Eloquence::hasColumn
+     * @covers \Dman013\Eloquence\Eloquence::getColumnListing
+     * @covers \Dman013\Eloquence\Eloquence::loadColumnListing
      */
     public function it_loads_and_checks_the_column_listing()
     {
@@ -58,7 +58,7 @@ class EloquenceTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @covers \Dmn013\Eloquence\Eloquence::hook
+     * @covers \Dman013\Eloquence\Eloquence::hook
      */
     public function it_registers_and_call_hooks_on_eloquent_methods()
     {

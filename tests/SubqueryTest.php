@@ -1,8 +1,8 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
-use Dmn013\Eloquence\Subquery;
+use Dman013\Eloquence\Subquery;
 
 use Mockery as m;
 

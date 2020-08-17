@@ -1,9 +1,9 @@
 <?php
 
-namespace Dmn013\Eloquence\Tests;
+namespace Dman013\Eloquence\Tests;
 
 use Mockery as m;
-use Dmn013\Eloquence\AttributeCleaner\Observer;
+use Dman013\Eloquence\AttributeCleaner\Observer;
 
 class CleansAttributesObserverTest extends \PHPUnit_Framework_TestCase {
 
@@ -19,7 +19,7 @@ class CleansAttributesObserverTest extends \PHPUnit_Framework_TestCase {
     {
         $dirty = ['name' => 'Jarek Tkaczyk', '_method' => 'patch', 'incorrect_field' => 'value'];
 
-        $validable = m::mock('\Dmn013\Eloquence\Contracts\CleansAttributes');
+        $validable = m::mock('\Dman013\Eloquence\Contracts\CleansAttributes');
         $validable->shouldReceive('getDirty')->once()->andReturn($dirty);
         $validable->shouldReceive('getColumnListing')->once()->andReturn(['id', 'name']);
 
