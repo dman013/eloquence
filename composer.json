@@ -1,5 +1,5 @@
 {
-    "name": "sofa/eloquence",
+    "name": "dmn013/eloquence",
     "description": "Flexible Searchable, Mappable, Metable, Validation and more extensions for Laravel Eloquent ORM.",
     "license": "MIT",
     "support": {
@@ -17,18 +17,18 @@
     "authors": [
         {
             "name": "Jarek Tkaczyk",
-            "email": "jarek@softonsofa.com",
-            "homepage": "http://softonsofa.com/",
+            "email": "jarek@softondmn013.com",
+            "homepage": "http://softondmn013.com/",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=7.0.0",
-        "sofa/eloquence-base": "^5.5|^6.0",
-        "sofa/eloquence-metable": "^5.5|^6.0",
-        "sofa/eloquence-mutable": "^5.5|^6.0",
-        "sofa/eloquence-mappable": "^5.5|^6.0",
-        "sofa/eloquence-validable": "^5.5|^6.0"
+        "php": ">=7.3.0",
+        "dmn013/eloquence-base": "^5.5|^6.0|^7.0",
+        "dmn013/eloquence-metable": "^5.5|^6.0|^7.0",
+        "dmn013/eloquence-mutable": "^5.5|^6.0|^7.0",
+        "dmn013/eloquence-mappable": "^5.5|^6.0|^7.0",
+        "dmn013/eloquence-validable": "^5.5|^6.0|^7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.5.0",
@@ -37,7 +37,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Sofa\\Eloquence\\Tests\\": "tests"
+            "Dmn013\\Eloquence\\Tests\\": "tests"
         }
     },
     "minimum-stability": "stable",

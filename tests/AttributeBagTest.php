@@ -1,10 +1,10 @@
 <?php
 
-namespace Sofa\Eloquence\Tests;
+namespace Dmn013\Eloquence\Tests;
 
 use Illuminate\Database\Eloquent\Model;
-use Sofa\Eloquence\Metable\AttributeBag;
-use Sofa\Eloquence\Metable\Attribute;
+use Dmn013\Eloquence\Metable\AttributeBag;
+use Dmn013\Eloquence\Metable\Attribute;
 
 class AttributeBagTest extends \PHPUnit_Framework_TestCase {
 

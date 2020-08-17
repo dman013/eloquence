@@ -1,6 +1,6 @@
-# Sofa/Eloquence
+# Dmn013/Eloquence
 
-[![Build Status](https://travis-ci.org/jarektkaczyk/eloquence.svg)](https://travis-ci.org/jarektkaczyk/eloquence) [![Downloads](https://poser.pugx.org/sofa/eloquence/downloads)](https://packagist.org/packages/sofa/eloquence) [![stable](https://poser.pugx.org/sofa/eloquence/v/stable.svg)](https://packagist.org/packages/sofa/eloquence)
+[![Build Status](https://travis-ci.org/jarektkaczyk/eloquence.svg)](https://travis-ci.org/jarektkaczyk/eloquence) [![Downloads](https://poser.pugx.org/dmn013/eloquence/downloads)](https://packagist.org/packages/dmn013/eloquence) [![stable](https://poser.pugx.org/dmn013/eloquence/v/stable.svg)](https://packagist.org/packages/dmn013/eloquence)
 
 Easy and flexible extensions for the [Eloquent ORM](https://laravel.com/docs/eloquent).
 
@@ -17,13 +17,13 @@ By installing this package you get aforementioned extensions. Alternatively you 
 
 ```bash
 # get all extensions
-composer require sofa/eloquence 
+composer require dmn013/eloquence 
 
 # get single extension, eg. Metable
-composer require sofa/eloquence-metable
+composer require dmn013/eloquence-metable
 ```
 
-**Check the [documentation](https://github.com/jarektkaczyk/eloquence/wiki) for installation and usage info, [website](http://softonsofa.com/tag/eloquence/) for examples and [API reference](http://jarektkaczyk.github.io/eloquence-api)**
+**Check the [documentation](https://github.com/jarektkaczyk/eloquence/wiki) for installation and usage info, [website](http://softondmn013.com/tag/eloquence/) for examples and [API reference](http://jarektkaczyk.github.io/eloquence-api)**
 
 ## Contribution
 

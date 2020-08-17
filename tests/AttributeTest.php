@@ -1,10 +1,10 @@
 <?php
 
-namespace Sofa\Eloquence\Tests;
+namespace Dmn013\Eloquence\Tests;
 
 use Illuminate\Database\Eloquent\Model;
-use Sofa\Eloquence\Metable\Attribute;
-use Sofa\Eloquence\Metable\AttributeBag;
+use Dmn013\Eloquence\Metable\Attribute;
+use Dmn013\Eloquence\Metable\AttributeBag;
 
 class AttributeTest extends \PHPUnit_Framework_TestCase {
 
@@ -115,13 +115,13 @@ class AttributeTest extends \PHPUnit_Framework_TestCase {
     {
         $bag = $this->getAttribute()->newBag();
 
-        $this->assertInstanceOf('Sofa\Eloquence\Metable\AttributeBag', $bag);
+        $this->assertInstanceOf('Dmn013\Eloquence\Metable\AttributeBag', $bag);
     }
 
     /**
      * @test
-     * @covers \Sofa\Eloquence\Metable\Attribute::getTable
-     * @covers \Sofa\Eloquence\Metable\Attribute::setCustomTable
+     * @covers \Dmn013\Eloquence\Metable\Attribute::getTable
+     * @covers \Dmn013\Eloquence\Metable\Attribute::setCustomTable
      */
     public function it_allows_custom_table_name_to_be_set_once()
     {
